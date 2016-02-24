@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>计算器</title>
+	<link href="css\calculator.css" rel="stylesheet">
+	
+</head>
+
+<body>
+	<div class="calc" id="calc">
+		<div class="calhead" id="calhead">计算器</div>
+		<div class="panel-body">
+			<div class="menu">
+				<ul class="ul-menu">
+					<li class="li-menu">
+						<button>查看(V)</button>
+						<ul class="showli" id="lookup">
+							<li>
+								<div class="li-div">
+									<input type="radio" name="radio1" id="standard" value="standard" checked>
+								</div>
+								<label for="standard">标准型(T)<span>Alt+1</span></label>
+							</li>
+							<li>
+								<div class="li-div hide">
+									<input class="hideradio" type="radio" name="radio1" id="science" value="science">
+								</div>
+								<label for="science">科学型(S)<span>Alt+2</span></label>
+							</li>
+							<li>
+								<div class="li-div hide">
+									<input class="hideradio" type="radio" name="radio1" id="programmer" value="programmer">
+								</div>
+								<label for="programmer">程序员(P)<span>Alt+3</span></label>
+							</li>
+							<li>
+								<div class="li-div hide">
+									<input class="hideradio" type="radio" name="radio1" id="stainfo" value="3">
+								</div>
+								<label for="stainfo">统计信息(A)<span>Alt+4</span></label>
+							</li>
+							<li class="li-hr"><hr></li>
+							<li>
+								<div class="li-div hide">
+									<input class="hideradio" type="checkbox" name="checkbox" id="history" value="0">
+								</div>
+								<label for="history">历史记录(Y)<span>Ctr+H</span></label>
+							</li>
+							<li>
+								<div class="li-div hide">
+									<input class="hideradio" type="checkbox" name="checkbox" id="group" value="1">
+								</div>
+								<label for="group">数字分组(I)<span>Ctr+H</span></label>
+							</li>
+							<li class="li-hr"><hr></li>
+							<li>
+								<div class="lli-div">
+									<input type="radio" name="radio2" id="basic" checked value="basic">
+								</div>
+								<label for="basic">基本(B)<span>Ctrl+F4</span></label>
+							</li>
+							<li>
+								<div class="lli-div hide">
+									<input class="hideradio" type="radio" name="radio2" id="unitchange" value="unitchange">
+								</div>
+								<label for="unitchange">单位转换(U)<span>Ctrl+U</span></label>
+							</li>
+							<li>
+								<div class="lli-div hide">
+									<input class="hideradio" type="radio" name="radio2" id="calcudate" value="calcudate">
+								</div>
+								<label for="calcudate">日期计算(D)<span>Ctrl+E</span></label>
+							</li>
+							<li class="menu-show">
+								<div class="lli-div hide"> 
+									<input class="hideradio" type="checkbox" id="worktable">
+								</div>
+								<label for="worktb">工作表(W)</label>
+								<ul class="work-sub-menu">
+									<li>
+										<label>抵押(M)</label>
+									</li>
+									<li>
+										<label>汽车租赁(V)</label>
+									</li>
+									<li>
+										<label>油耗(mpg)</label>
+									</li>
+									<li>
+										<label>油耗(l/100km)(U)</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="li-menu">
+						<button>编辑(E)</button>
+						<ul class="showli" id="edit">
+							<li>
+								<label>复制(C)<span>Ctrl+C</span></label>
+							</li>
+							<li>
+								<label>粘贴(P)<span>Ctrl+V</span></label>
+							</li>
+							</li><li class="li-hr"><hr></li>
+							<li class="menu-show">
+								<label>历史记录(H)</label>
+								<ul class="his-sub-menu">
+									<li>
+										<label>复制历史记录(I)</label>
+									</li>
+									<li>
+										<label>编辑(E)<span>F2</span></label>
+									</li>
+									<li>
+										<label>取消编辑(N)<span>Esc</span></label>
+									</li>
+									<li>
+										<label>清除(L)<span>Ctr+Shift+D</span></label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="li-menu">
+						<button>帮助(H)</button>
+						<ul class="showli" id="help">
+							<li>
+								<label>查看帮助(V)<span>F1</span></label>
+							</li>
+							<li class="li-hr"><hr></li>
+							<li>
+								<label>关于计算器(A)</label>
+							</li>
+						</ul>
+					</li>
+			    </ul>
+			</div>
+			<div class="container">
+				<div class="view">
+					<div class="showtext" id="process"></div>
+					<div class="showresult" id="view">0</div>
+				</div>
+				<div class="left" id="left">
+				    <!--标准型-->
+					<div class="outer1" id="outer1">
+				  		<table class="standard" id="standard">
+							<tr>
+								<td><input type="button" value="MC"></td>
+								<td><input type="button" value="MR" ></td>
+								<td><input type="button" value="MS" ></td>
+								<td><input type="button" value="M+" ></td>
+								<td><input type="button" value="M-" ></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="back"></td>
+								<td><input type="button" value="CE"></td>
+								<td><input type="button" value="C"></td>
+								<td><input type="button" value="+-"></td>
+								<td><input type="button" value="sqr"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="7"></td>
+								<td><input type="button" value="8"></td>
+								<td><input type="button" value="9"></td>
+								<td><input type="button" value="/"></td>
+								<td><input type="button" value="%"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="4"></td>
+								<td><input type="button" value="5"></td>
+								<td><input type="button" value="6"></td>
+								<td><input type="button" value="*"></td>
+								<td><input type="button" value="1/x"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="1"></td>
+								<td><input type="button" value="2"></td>
+								<td><input type="button" value="3"></td>
+								<td><input type="button" value="-"></td>
+								<td rowspan="2"><input type="button" value="="></td>
+							</tr>
+							<tr>
+								<td colspan="2"><input type="button" value="0"></td>
+								<td><input type="button" value="."></td>
+								<td><input type="button" value="+"></td> 
+							</tr>
+			            </table>
+					</div>
+				    <!--科学型-->
+					<div class="outer2 hide" id="outer2">
+						<div class="div1">
+							<div class="radiodiv">
+								<input type="radio" name="radiogroup" value="0">度
+								<input type="radio" name="radiogroup" value="0">弧度
+								<input type="radio" name="radiogroup" value="0">梯度
+							</div>
+							<table class="tb1">
+								<tr>
+									<td><input type="button" value=" "></td>
+									<td><input type="button" value="Inv"></td>
+									<td><input type="button" value="ln"></td>
+									<td><input type="button" value="("></td>
+									<td><input type="button" value=")"></td>
+								</tr>
+								<tr>
+									<td><input type="button" value="Int"></td>
+									<td><input type="button" value="sinh"></td>
+									<td><input type="button" value="sin"></td>
+									<td><input type="button" value="x^2"></td>
+									<td><input type="button" value="n!"></td>
+								</tr>
+								<tr>
+									<td><input type="button" value="dms"></td>
+									<td><input type="button" value="cosh"></td>
+									<td><input type="button" value="cos"></td>
+									<td><input type="button" value="x^y"></td>
+									<td><input type="button" value="y~x"></td>
+								</tr>
+								<tr>
+									<td><input type="button" value="pi"></td>
+									<td><input type="button" value="tanh"></td>
+									<td><input type="button" value="tan"></td>
+									<td><input type="button" value="x^3"></td>
+									<td><input type="button" value="3~x"></td>
+								</tr>
+								<tr>
+									<td><input type="button" value="F-E"></td>
+									<td><input type="button" value="Exp"></td>
+									<td><input type="button" value="Mod"></td>
+									<td><input type="button" value="log"></td>
+									<td><input type="button" value="10^x"></td>
+								</tr>
+							</table>
+							</div>
+							<div class="div2" id="div2">
+							<table class="tb2">
+							<tr>
+								<td><input type="button" value="MC"></td>
+								<td><input type="button" value="MR"></td>
+								<td><input type="button" value="MS"></td>
+								<td><input type="button" value="M+"></td>
+								<td><input type="button" value="M-"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="back"></td>
+								<td><input type="button" value="CE"></td>
+								<td><input type="button" value="C"></td>
+								<td><input type="button" value="+-"></td>
+								<td><input type="button" value="sqr"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="7"></td>
+								<td><input type="button" value="8"></td>
+								<td><input type="button" value="9"></td>
+								<td><input type="button" value="/"></td>
+								<td><input type="button" value="%"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="4"></td>
+								<td><input type="button" value="5"></td>
+								<td><input type="button" value="6"></td>
+								<td><input type="button" value="*"></td>
+								<td><input type="button" value="1/x"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="1"></td>
+								<td><input type="button" value="2"></td>
+								<td><input type="button" value="3"></td>
+								<td><input type="button" value="-"></td>
+								<td rowspan="2"><input type="button" value="="></td>
+							</tr>
+							<tr>
+								<td colspan="2"><input type="button" value="0"></td>
+								<td><input type="button" value="."></td>
+								<td><input type="button" value="+"></td> 
+							</tr>
+							</table>
+							</div>
+					</div>
+					<!--程序员-->
+					<div class="outer3 hide" id="outer3">
+						<div class="pdiv1" id="pdiv1">
+						<table class="ptb">
+							<tr>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+							</tr>
+							<tr>
+								<td>63</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>47</td>
+								<td></td>
+								<td></td>
+								<td>32</td>
+							</tr>
+							<tr>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+							</tr>
+							<tr>
+								<td>31</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>15</td>
+								<td></td>
+								<td></td>
+								<td>0</td>
+							</tr>
+							</table>
+							</div>
+							<div class="pdiv2">
+							<div class="div2-1">
+								<input type="radio" name="radiodgroup1" value="0" checked>十六进制<br />
+								<input type="radio" name="radiodgroup1" value="0">十进制<br />
+								<input type="radio" name="radiodgroup1" value="0">八进制<br />
+								<input type="radio" name="radiodgroup1" value="0">二进制<br />
+							</div>
+							<div class="div2-2">
+								<input type="radio" name="radiodgroup2" value="0" checked>四字<br />
+								<input type="radio" name="radiodgroup2" value="0">双字<br />
+								<input type="radio" name="radiodgroup2" value="0">字<br />
+								<input type="radio" name="radiodgroup2" value="0">字节<br />
+							</div>
+							</div>
+							<div class="pdiv3">
+							<table class="tb1">
+							<tr>
+								<td><input type="button" value=" "></td>
+								<td><input type="button" value="Mod"></td>
+								<td><input type="button" value="A"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="("></td>
+								<td><input type="button" value=")"></td>
+								<td><input type="button" value="B"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="RoL"></td>
+								<td><input type="button" value="RoR"></td>
+								<td><input type="button" value="C"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="Or"></td>
+								<td><input type="button" value="Xor"></td>
+								<td><input type="button" value="D"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="Lsh"></td>
+								<td><input type="button" value="Rsh"></td>
+								<td><input type="button" value="E"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="Not"></td>
+								<td><input type="button" value="And"></td>
+								<td><input type="button" value="F"></td>
+							</tr>
+						</table> 
+						<table class="tb2">
+							<tr>
+								<td><input type="button" value="MC"></td>
+								<td><input type="button" value="MR"></td>
+								<td><input type="button" value="MS"></td>
+								<td><input type="button" value="M+"></td>
+								<td><input type="button" value="M-"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="back"></td>
+								<td><input type="button" value="CE"></td>
+								<td><input type="button" value="C"></td>
+								<td><input type="button" value="+-"></td>
+								<td><input type="button" value="sqr"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="7"></td>
+								<td><input type="button" value="8"></td>
+								<td><input type="button" value="9"></td>
+								<td><input type="button" value="/"></td>
+								<td><input type="button" value="%"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="4"></td>
+								<td><input type="button" value="5"></td>
+								<td><input type="button" value="6"></td>
+								<td><input type="button" value="*"></td>
+								<td><input type="button" value="1/x"></td>
+							</tr>
+							<tr>
+								<td><input type="button" value="1"></td>
+								<td><input type="button" value="2"></td>
+								<td><input type="button" value="3"></td>
+								<td><input type="button" value="-"></td>
+								<td rowspan="2"><input type="button" value="="></td>
+							</tr>
+							<tr>
+								<td colspan="2"><input type="button" value="0"></td>
+								<td><input type="button" value="."></td>
+								<td><input type="button" value="+"></td> 
+							</tr>
+						</table>
+						</div>
+      				</div>
+				</div>
+				<div class="right" id="right">
+					<!--单位转换-->
+					<div id="outer4" class="outer4 hide">
+						<br/>
+						<label class="lab">选择要转换的单位类型</label><br/><br/>
+						<select class="sle">
+							<option>功率</option>
+							<option>角度</option>
+							<option>面积</option>
+							<option>能量</option>
+							<option>时间</option>
+							<option>速率</option>
+							<option>体积</option>
+							<option>温度</option>
+							<option>压力</option>
+							<option>长度</option>
+							<option>重量/质量</option>
+						</select>
+						<label class="lab" for="from">从</label><br/>
+						<input class="input-first" id="from" type="text" value="输入值"><br/>
+						<select class="sle">
+							<option>BUT/分钟</option>
+							<option>马力</option>
+							<option>千瓦</option>
+							<option>瓦特</option>
+							<option>英尺-磅/分钟</option>
+						</select>
+						<label class="lab" for="to">到</label><br/>
+						<input class="input-first" id="to" type="text"><br/>
+						<select class="sle">
+							<option>BUT/分钟</option>
+							<option>马力</option>
+							<option>千瓦</option>
+							<option>瓦特</option>
+							<option>英尺-磅/分钟</option>
+						</select>
+						<!-- </div> -->
+      				</div>
+					<!--日期计算-->  
+					<div id="outer5" class="outer5 hide">
+						<br/>
+						<label class="lab">选择所需的日期计算</label><br/><br/>
+						<select class="sle">
+						  <option>计算两个日期之差</option>
+						  <option>加上或减去到指定日期的天数</option>
+						</select>
+						<label class="labf" for="from">从</label>
+						<input class="date" id="from" type="date">
+						<label class="labt" for="to">到</label>
+						<input class="date" id="to" type="date"><br/>
+						<label class="lab">差(年、月、周、天)</label>
+						<input class="input-first2" type="text"><br/>
+						<label class="lab">差(天)</label>
+						<input class="input-first2" type="text"><br/>
+						<input type="button" class="btn-sub" value="提交">
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js\calculator.js"></script>
+</body>
+</html>

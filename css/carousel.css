@@ -1,0 +1,153 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: block;
+	line-height: 0;
+}
+.clearfix:after {
+	clear: both;
+}
+.st-panel .carousel {
+	position: relative;
+    margin: 0 auto;
+    width: 640px;
+    height: 300px;
+}
+.content {
+	position: relative;
+	width: 500px;
+	height: 300px;
+	overflow: hidden;
+	margin: 220px auto 0;
+}
+.content ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.images {
+	position: relative;
+  	left: 0;
+	width: 3000px;
+	transition: all 0.5s linear 0s;
+}
+.images li {
+	float: left;
+	cursor: pointer;
+	width: 500px;
+	height: 300px;
+}
+.images li:first-child {
+	background: url(../images/1.jpg) no-repeat 50% 50%/contain;
+}
+.images li:nth-child(2) {
+	background: url(../images/2.jpg) no-repeat 50% 50%/contain;
+}
+.images li:nth-child(3) {
+	background: url(../images/3.jpg) no-repeat 50% 50%/contain;
+}
+.images li:nth-child(4) {
+	background: url(../images/4.jpg) no-repeat 50% 50%/contain;
+}
+.images li:nth-child(5) {
+	background: url(../images/5.jpg) no-repeat 50% 50%/contain;
+}
+.images li:nth-child(6) {
+	background: url(../images/6.jpg) no-repeat 50% 50%/contain;
+}
+/*.images img {
+	width: 500px;
+  	height: 300px;
+}*/
+
+.dots {
+	position: absolute;
+	top: 287px;
+	left: 190px;
+}
+.dots ul {
+	margin: 0 14px;
+	height: 13px;
+}
+.dots li {
+	float: left;
+	background-color: #F3F3F3;
+	width: 9px;
+	height: 9px;
+	border: 1px solid #BCBCBC;
+	border-radius: 50%;
+	margin: 0 6px;
+	cursor: pointer;
+}
+.dots .changeclr {
+	background-color: #178EC4;
+	border-color: #178EC4;
+}
+
+.lf-arrow {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -30px;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+.lf-arrow:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-left-width: 0;
+	border-right-color: #ccc;
+}
+.lf-arrow:after {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-left-width: 0;
+	border-right-color: #fff;
+}
+
+.rg-arrow {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -30px;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+.rg-arrow:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-right-width: 0;
+	border-left-color: #ccc;
+}
+.rg-arrow:after {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-right-width: 0;
+	border-left-color: #fff;
+}

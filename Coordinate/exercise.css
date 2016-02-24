@@ -1,0 +1,30 @@
+table {
+	margin: 20px auto;
+	border-collapse: collapse;
+	border: 1px solid;
+}
+tr,td {
+	border:1px solid;
+}
+td {
+	width: 32px;
+    height: 32px;
+	border: 1px solid;
+	line-height: 30px;
+	text-align: center;
+}
+ 
+.bg {
+	background-color: #ccc;
+}
+#ignorebtn {
+	position: fixed;
+	top: 20px;
+	left: 22px;
+}
+input[type=button] {
+	border-radius: 5px;
+	background-color: #F6F6F6;
+	width: 70px;
+	height: 35px;
+}

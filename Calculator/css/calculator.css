@@ -1,0 +1,581 @@
+body{
+	position: absolute;
+	top: 90px;
+	left: 100px;
+}
+.calhead{
+	font-weight: strong;
+	margin-left: 4px;
+}
+.calc{
+	position: absolute;
+	float: left;
+	width: 311px;
+	height: 390px;
+	background: #e9e9e9;
+	border: 3px solid #5F9F9F;
+	border-radius: 8px;
+	-webkit-transition:width 0.2s, height 0.2s, -webkit-transform 0s;
+}
+
+.panel-body{
+	width: auto;
+	border: 1px solid #5F9F9F;
+	border-radius: 4px;
+	margin: 10px 5px 10px 5px;
+	
+}
+.panel-body:after {
+	content: '020';
+	display: block;
+	height: 0;
+	clear: both;
+	overflow: hidden;
+}
+/*设置菜单*/
+.menu{
+	height: 30px;
+	margin: 0px 0px 12px 0px;
+	padding-top: 0px;
+	border-bottom: 1px solid #5F9F9F;
+	border-radius: 0px 4px;
+	background: #e9e9e9;
+	line-height: 28px;
+}
+ul,li{
+    list-style-type: none;
+}
+li {
+	border: 1px solid #CCC;
+} 
+
+.ul-menu{
+	width: 200px;
+	height: 30px;
+	margin: 0px 0px;
+	padding:0px 0px;
+}
+.li-menu{
+	float: left;
+	width: 60px;
+	height: 30px;
+	border: 0px;
+	position: relative;
+    cursor: pointer;
+}
+
+/*当鼠标移到一级菜单上时显示边框*/
+ul li ul li:hover{
+	border: 1px solid #70DB93;
+}
+
+/*当鼠标移到一级菜单的最后一个子菜单上时显示二级菜单*/
+ul li ul>li:last-child ul{
+	display: none;
+}
+ul li ul>li:last-child:hover ul{
+	display: block;
+}
+/*设置工作表和历史记录二级菜单的样式*/
+.menu-show{
+	position: relative;
+}
+
+.work-sub-menu{
+	position: absolute;
+	margin-left: 20px;
+	left: 170px;
+	top: -3px;
+}
+.work-sub-menu label{
+	margin-left: 10px;
+}
+
+.his-sub-menu{
+	position: absolute;
+	left: 179px;
+	top: -10px;
+}
+.his-sub-menu label{
+	color: #9B9898;
+}
+/*设置菜单按钮的样式*/
+button{
+	width: 60px;
+	height: 30px;
+	border: 0px;
+	background-color: inherit;
+}
+.li-menu ul{
+	background-color: #CCC;
+	width: 220px;
+	margin: 0px;
+	padding: 0px;
+	line-height: 20px;
+}
+ul li label{
+	display: inline-block;
+	width: 144px;
+	border:none;
+	padding-left: 40px;
+	position: relative;
+}
+
+/*设置菜单垂直分割线*/
+ul li label:before{
+	content:"";
+	position: absolute;
+	width:1px;
+	height:32px;
+	top:-9px;
+	left:30px;
+	background-color: #C2B8B8;
+
+}
+
+/*设置按钮外的边框*/
+.li-div{
+	width:20px;
+	height: 20px;
+	border:1px solid #70DB93;
+	margin-bottom: -20px;
+}
+.lli-div{
+	width:20px;
+	height: 20px;
+	border:1px solid #70DB93;
+	margin-bottom: -20px;
+}
+/*设置菜单项的快捷键位置*/
+span{
+	text-align: right;
+	float: right;
+}
+
+/*设置菜单水平分割线*/
+.li-hr{
+	margin:0px 0px 0px 36px;
+	border:none;
+	/* height:0px; */
+	/* background-color: #ccc; */
+}
+hr{
+	height:0px;
+	color:#C2B8B8;
+}
+.li-hr:hover{
+	border:none;
+}
+.showli{
+	display: none; 
+}
+
+/*计算器显示区域设置*/
+.showtext{
+	width: 282px;
+	height: 25px;
+	margin: 0px 6px 0px 6px;
+	padding-left: 1px;
+	text-align: right;
+	background-color: #FFFFFF;
+	border: 2px solid #FFFFFF;
+	border-radius: 4px 4px 0px 0px;
+}
+.showresult{
+	width: 282px;
+	height: 25px;
+	margin: 0px 6px 0px 6px;
+	padding-left: 1px;
+	text-align: right;
+	background-color: #FFFFFF;
+	border: 2px solid #FFFFFF;
+	border-radius: 0px 0px 4px 4px;
+}
+
+.hide{
+	display: none;
+}
+.present{
+	display: block;
+}
+.left{
+	float: left;
+}
+
+.right{
+	width:320px;
+	float: right;
+	margin-left: 0px;
+}
+/*标准型*/
+.outer1{
+	width: 300px;
+	height: 252px; 
+	border-radius: 10px;
+    font-family: Helvetica,arial;
+    font-size: 14px;
+}
+.sd-outer{
+	width: 311px;
+	height: 390px;
+}
+.standard{
+	margin-top: 1px;
+	margin-left: 0px;
+    border-spacing: 6px;//表示边框间距的大小
+    border-collapse: collapse;//表示边框合并在一起
+}
+.standard td{
+	width: 52px;
+	height: 33px;
+}
+.standard td[colspan="2"] {
+    width: 40%;
+    text-align: center;
+  } 
+.standard td input{
+	display: inline-block;
+	width: 100%;
+	height: 100%; 
+    padding: 0;
+    border: 1px solid #666;
+    border-radius: 4px;
+    font-family: 'Arial';
+    font-size: 15px;
+    background: linear-gradient(#e9e9e9,#C0D9D9);
+    color: black;
+    text-align: center;
+}
+
+/*设置鼠标移到计算器按钮上时颜色的改变*/
+.standard td input:hover{
+	background: linear-gradient(#e9e9e9,#E47833);
+}
+.tb1 td input:hover{
+	background: linear-gradient(#e9e9e9,#E47833);
+}
+.tb2 td input:hover{
+	background: linear-gradient(#e9e9e9,#E47833);
+}
+/*基本标准*/
+.basicstashowtext{
+	width: 282px;
+}
+/*基本科学*/
+.basicscishowtext{
+	width: 554px;
+}
+/*基本程序员*/
+.basicproshowtext{
+	width: 516px;
+}
+/*科学型*/
+.outer2{
+	overflow: hidden;
+	width: 573px;
+	height: 253px;
+	margin-top: -6px;
+	border-radius: 10px;
+    font-family: Helvetica,arial;
+    font-size: 15px;
+}
+/*变换之后的最外层的outer*/
+.souter{
+	width: 584px;
+}
+.div1{
+ 	float: left;
+ 	margin-top: 11px;
+ 	margin-left: 3px;
+ }
+.div2{
+    float: left;
+    margin-top: 15px;
+ }
+ 
+.tb1 .tb2{
+	margin-top: 1px;
+	margin-left: 0px;
+    border-spacing: 6px;//表示边框间距的大小
+    border-collapse: collapse;//表示边框合并在一起
+ }
+ .tb1 td{
+	width: 52px;
+	height: 35px;
+}
+.tb2 td{
+	width: 52px;
+	height: 35px;
+}
+.tb1 td input{
+	display: inline-block;
+	width: 100%;
+	height: 100%; 
+    padding: 0;
+    border: 1px solid #666;
+    border-radius: 4px;
+    font-family: 'Arial';
+    font-size: 15px;
+    background: linear-gradient(#e9e9e9,#C0D9D9);
+    color: black;
+    text-align: center;
+}
+.tb2 td input{
+	display: inline-block;
+	width: 100%;
+	height: 100%; 
+    padding: 0;
+    border: 1px solid #666;
+    border-radius: 4px;
+    font-family: 'Arial';
+    font-size: 15px;
+    background: linear-gradient(#e9e9e9,#C0D9D9);
+    color: black;
+    text-align: center;
+}
+.tb2 td[colspan="2"] {
+    width: 40%;
+    text-align: center;
+  } 
+.radiodiv{
+	border: 2px solid #C0D9D9;
+	width: 270px;
+	height: 29px;
+	margin-top: 8px;
+	margin-left: 4px;
+}
+/*程序员*/
+.outer3{
+	width: 533px;
+	border-radius: 10px;
+    font-family: Helvetica,arial;
+    font-size: 14px;
+}
+/*变换之后的最外层的outer*/
+.pouter{
+ 	width:545px;
+ 	height:478px;
+ }
+ .pdiv1{
+	width: 516px;
+	margin-top: 8px;
+	margin-left: 6px;
+	border: 2px solid #C0D9D9;
+}
+.pdiv2{
+	float: left;
+	width: 106px;
+    height: 230px;
+	margin-left: 7px;
+	margin-top: -7px;
+}
+.div2-1{
+    width: 97px;
+    height: 108px;
+    margin-top: 12px;
+    border: 2px solid #C0D9D9;
+    line-height: 25px;
+}
+
+.div2-2{
+	width: 97px;
+    height: 107px;
+    margin-top: 5px;
+    border: 2px solid #C0D9D9;
+    line-height: 25px;
+}
+.pdiv3{
+	margin-top: 200px;
+	height: 230px;
+	margin: 0px 5px 10px 98px;
+}
+.ptb{
+	width:517px;
+	height:82px;
+}
+.pdiv3 .tb1{
+	float: left;
+	margin-right: -1px;
+} 
+.tb td{
+	padding-right: 20px;
+}
+.tb td:first-child{
+    padding-left: 7px;
+}
+/*标准型单位转换*/
+.outer4{
+	width: 304px;
+ 	height: 300px;
+ 	border:1px solid #5F9F9F;
+	border-radius: 10px;
+	margin-top: -58px;
+	margin-left: 302px;
+    font-family: Helvetica,arial;
+    font-size: 15px;
+}
+.outer4-sd{
+	margin-left: 308px;
+}
+.st-outer4{
+ 	width: 633px;
+ 	height: 391px;
+ }
+.lab{
+   font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+   font-size: 14px;
+   color: #545454;
+   padding-left: 15px;  
+ }
+ 
+ .sle{
+ 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+ 	width:280px;
+ 	height: 25px;
+ 	margin-left: 15px;
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ 	border-radius: 5px;
+ 	background: linear-gradient(#e9e9e9,#C0D9D9);
+ }
+ .input-first{
+ 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+ 	width:274px;
+ 	height: 20px;
+ 	margin-left: 15px;
+ 	border-radius: 2px;
+ }
+ /*标准型日期计算*/
+ .outer5{
+	width: 304px;
+ 	height: 300px;
+ 	border:1px solid #5F9F9F;
+	border-radius: 10px;
+	margin-top: -58px;
+	margin-left: 312px;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    font-size: 15px;
+}
+/*标准型日期计算变换后最外层*/
+.st-outer5{
+	width: 639px;
+	height: 391px;
+}
+.date{
+ 	width: 115px;
+ }
+.labf{
+   
+   font-size: 15px;
+   color: #545454;
+   padding-left: 15px;  
+}
+.labt{
+   font-size: 15px;
+   color: #545454;
+   margin-left: 0px;  
+}
+.input-first2{
+ 	width:274px;
+ 	height: 20px;
+ 	margin-left: 15px;
+ 	margin-bottom: 15px;
+ 	border-radius: 2px;
+ }
+.btn-sub{
+ 	width: 75px;
+ 	height: 20px;
+ 	background: linear-gradient(#e9e9e9,#C0D9D9);
+ 	border-radius: 4px;
+ 	float:right;
+ 	margin-right: 12px;
+}
+ 
+ /*标准型单位转换时显示计算过程的宽度*/
+.sduc-showtext{
+	width: 289px;
+	height: 25px;
+}
+
+/*科学型单位转换最外层样式*/
+.suc-outer{
+	width: 909px;
+    height: 388px;
+}
+/*科学型单位转换次外层样式*/
+.suc-outer4{
+	width: 307px;
+	height: 300px;
+	margin-top: -56px;
+	margin-left: 580px;
+}
+/*科学型单位转换次过程显示的宽度*/
+
+.suc-showtext{
+	width: 553px;
+	height: 25px;
+}
+
+/*科学型日期计算次过程显示的宽度*/
+
+.scd-showtext{
+	width: 553px;
+}
+/*科学型日期计算最外层样式*/
+.scd-outer{
+	width: 909px;
+}
+/*科学型日期计算次外层样式*/
+.scd-outer5{
+	width: 310px;
+	height: 295px;
+	margin-left: 576px;
+	margin-top: -57px;
+}
+
+/*程序员单位转换过程显示的宽度*/
+
+.puc-showtext{
+	width: 514px;
+}
+/*程序员单位转换最外层样式*/
+.puc-outer{
+ 	width: 886px;
+    height: 477px;
+ }
+/*程序员单位转换次外层样式*/
+.puc-outer4{
+	width: 300px;
+	height: 380px;
+	margin-left: 562px;
+	margin-top: -57px;
+}
+
+/*程序员日期计算过程显示宽度*/
+.pcd-showtext{
+	width: 536px;
+}
+
+.pdiv1-p{
+	width: 536px
+}
+ /*程序员日期计算最外层样式*/
+
+.pcd-outer{
+	 width: 903px;
+	 height: 479px;
+ }
+/*程序员日期计算次外层样式*/
+.pcd-outer5{
+	width: 319px;
+   height: 389px;
+   margin-left: 562px;
+   margin-top: -57px;
+}
+
+.showradio{
+	display: block;
+}
+.hideradio{
+	display: none;
+}
