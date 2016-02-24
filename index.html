@@ -15,37 +15,37 @@
   <div class="st-container">
     <ul class="nav">
       <li>
-        <a href="#####">
+        <a href="#">
           基本信息
         </a>
       </li>
       <li>
-        <a href="#####">
+        <a href="#">
           求职意向
         </a>
       </li>
       <li>
-        <a href="#####">
+        <a href="#">
           教育经历
         </a>
       </li>
       <li>
-        <a href="#####">
+        <a href="#">
           项目经验
         </a>
       </li>
       <li>
-        <a href="#####">
+        <a href="#">
           荣誉证书
         </a>
       </li>
       <li>
-        <a href="#####">
+        <a href="#">
           专业技能
         </a>
       </li>
       <li>
-        <a href="#####">
+        <a href="#">
           学习成果
         </a>
       </li>
@@ -141,24 +141,12 @@
         <div class="carousel">
           <div class="content">
             <ul class="images clearfix" id="images">
-              <li>
-                <!-- <img src="images/1.jpg"> -->
-              </li>
-              <li>
-                <!-- <img src="images/2.jpg"> -->
-              </li>
-              <li>
-                <!-- <img src="images/3.jpg"> -->
-              </li>
-              <li>
-                <!-- <img src="images/4.jpg"> -->
-              </li>
-              <li>
-                <!-- <img src="images/5.jpg"> -->
-              </li>
-              <li>
-                <!-- <img src="images/6.jpg"> -->
-              </li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
             <div class="dots">
               <ul class="clearfix" id="dot">
@@ -174,7 +162,6 @@
           <div class="lf-arrow" id="lfArrow"></div>
           <div class="rg-arrow" id="rgArrow"></div>
         </div>
-        
       </section>
       <section class="st-panel">
         <div class="st-desc" data-icon="F">F</div>
@@ -211,30 +198,6 @@
       <section class="st-panel">
         <div class="st-desc" data-icon="G">G</div>
           <h2>Learning Outcomes</h2>
-          <!-- <div id="content">
-            <h1>Learning Outcomes</h1>
-            <hr />
-            <div id="images">
-              <a id="example1-1" title="desk webpage" href="images/desk-l.png">
-                <img alt="desk" src="images/desk-m.png" />
-              </a>
-              <a id="example1-2" title="lotus webpage" href="images/lotus-l.png">
-                <img alt="lotus" src="images/lotus-m.png" />
-              </a>
-              <a id="example1-3" title="iphone6" href="images/iphone6-l.png">
-                <img alt="iphone6" src="images/iphone6-m.png" />
-              </a>
-              <a id="example2-1" title="坐标线定位" href="images/line-l.png">
-                <img alt="coordination" src="images/line-m.png" />
-              </a>
-              <a id="example2-2" title="苹果笔记本俯视图" href="images/macpro-l.png">
-                <img alt="macpro" src="images/macpro-m.png" />
-              </a>
-            </div>
-            
-            <div id="credit"></div>
-          </div> -->
-          <!-- <div class="outcome"> -->
             <ul class="pictures">
               <li>
                 <a class="tooltips" data-src="images/desk-l.png" target="_blank" href="Desk/desk.html" title="desk webpage">
@@ -272,60 +235,57 @@
   </div>
   <script src="js/resume.js"></script>
   <script type="text/javascript">
-  $(function(){
-    var x = 10;
-    var y = 20;
-
-    $('a.tooltips').mouseover(function(e){
-      var mytitle = $(this).attr('title');
-      $(this).attr('title','');
-      var imgTitle = mytitle ? '<br />' + mytitle : '';
-      var $tooltips ='<div id="tooltips"><img src='+$(this).attr('data-src')+'>'+ imgTitle +'</div>';
-      $('body').append($tooltips);
-      $('#tooltips').css({
-        "left": (e.pageX + x) + "px",
-        "top" : (e.pageY + y) + "px" 
-      }).show('fast');
-      if(e.pageX > 840) {
-        $('#tooltips').css(
-          "left", (e.pageX - x - 280) + "px").show('fast');
-      }
-      if (e.pageY > 340) {
-        $('#tooltips').css(
-          "top" , (e.pageY - y - 242) + "px").show('fast');
-      }else if(e.pageX > 686 && e.pageY > 400) {
+    $(function(){
+      var x = 10;
+      var y = 20;
+  
+      $('a.tooltips').mouseover(function(e){
+        var mytitle = $(this).attr('title');
+        $(this).attr('title','');
+        var imgTitle = mytitle ? '<br />' + mytitle : '';
+        var $tooltips ='<div id="tooltips"><img src='+$(this).attr('data-src')+'>'+ imgTitle +'</div>';
+        $('body').append($tooltips);
         $('#tooltips').css({
-          "left": (e.pageX - x - 280) + "px",
-          "top" : (e.pageY - y - 242) + "px"
+          "left": (e.pageX + x) + "px",
+          "top" : (e.pageY + y) + "px" 
         }).show('fast');
-      }
-      console.log(e.pageX); 
-    }).mouseout(function(){
-      var mytitle = $('#tooltips').text();
-      $(this).attr('title' , mytitle);
-      $('#tooltips').remove();
-    }).mousemove(function(e){
-      $('#tooltips').css({
-        "left": (e.pageX + x) + "px",
-        "top" : (e.pageY + y) + "px" 
-      }).show('fast');
-      if(e.pageX > 840) {
-        $('#tooltips').css(
-          "left", (e.pageX - x - 280) + "px").show('fast');
-      }
-      if (e.pageY > 340) {
-        $('#tooltips').css(
-          "top" , (e.pageY - y - 242) + "px").show('fast');
-      }else if(e.pageX > 686 && e.pageY > 400) {
+        if(e.pageX > 840) {
+          $('#tooltips').css(
+            "left", (e.pageX - x - 280) + "px").show('fast');
+        }
+        if (e.pageY > 340) {
+          $('#tooltips').css(
+            "top" , (e.pageY - y - 242) + "px").show('fast');
+        }else if(e.pageX > 686 && e.pageY > 400) {
+          $('#tooltips').css({
+            "left": (e.pageX - x - 280) + "px",
+            "top" : (e.pageY - y - 242) + "px"
+          }).show('fast');
+        }
+      }).mouseout(function(){
+        var mytitle = $('#tooltips').text();
+        $(this).attr('title' , mytitle);
+        $('#tooltips').remove();
+      }).mousemove(function(e){
         $('#tooltips').css({
-          "left": (e.pageX - x - 280) + "px",
-          "top" : (e.pageY - y - 142) + "px"
+          "left": (e.pageX + x) + "px",
+          "top" : (e.pageY + y) + "px" 
         }).show('fast');
-      }
-    })
-  });
-
-
+        if(e.pageX > 840) {
+          $('#tooltips').css(
+            "left", (e.pageX - x - 280) + "px").show('fast');
+        }
+        if (e.pageY > 340) {
+          $('#tooltips').css(
+            "top" , (e.pageY - y - 242) + "px").show('fast');
+        }else if(e.pageX > 686 && e.pageY > 400) {
+          $('#tooltips').css({
+            "left": (e.pageX - x - 280) + "px",
+            "top" : (e.pageY - y - 142) + "px"
+          }).show('fast');
+        }
+      })
+    });
 </script>
 </body>
 </html>
