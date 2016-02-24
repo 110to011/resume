@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 @font-face {
 	font-family: "Raphaelicons";
 	src: url('fonts/raphaelicons-webfont.eot') format('eot'),
@@ -484,21 +482,6 @@ a {
 	-moz-box-shadow: 0 0 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	box-shadow: 0 0 4px rgba(255, 255, 255, 0.3), 0px 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-/*.effect:before, 
-.effect:after {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8);
-	-moz-box-shadow: 0 0 20px rgba(0,0,0,0.8);
-	box-shadow: 0 0 20px rgba(0,0,0,0.8);
-	top: 50%;
-	bottom: 0;
-	left: 10px;
-	right: 10px;
-	-moz-border-radius: 100px / 10px;
-	border-radius: 100px / 10px;
-}*/
 
 .st-panel .starPic {
 	position: absolute;
@@ -506,7 +489,6 @@ a {
 	right: 80px;
 	width: 200px;
 	height: 200px;
-	/*background: url(../images/stars.png) no-repeat;*/
 }
 @keyframes starsAnimation {
 	0%,100% {
@@ -630,6 +612,8 @@ a {
 .st-panel.active .skill li em { 
 	position: relative; 
 	top: -30px;
+	font-size: 16px;
+    	font-weight: 700;
 }
 
 .st-panel.active .expand { 
