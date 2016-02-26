@@ -326,6 +326,7 @@ a {
 .st-panel.active .star-five {
    /*color: #00bb9c;*/
    position: relative;
+   top: 20px;
    margin: 360px auto 0;
    width: 0px;
    height: 0px;
@@ -407,24 +408,24 @@ a {
 }
 
 .info-content .sex {
-    top: -99px;
-    left: 60%;
+	top: -99px;
+	left: 60%;
 }
 .info-content .native {
-    top: 57px;
-    left: 58%;
+	top: 80px;
+	left: 56%;
 }
 .info-content .star {
 	top: -103px;
-    left: 27%;
+	left: 27%;
 }
 .info-content .mail {
-	top: 56px;
-    left: 8%;
+	top: 80px;
+	left: 11%;
 }
 .info-content .tel {
-    top: -217px;
-    left: 47%;
+	top: -217px;
+	left: 47%;
 }
 .info-content .highlight {
 	font-weight: 700;
